@@ -10,21 +10,28 @@
 </head>
 <body>
     <nav> <img src="images/logo.png" alt="logo" width="90px">Mona Travel Suites</nav>
+    <div class="navbar">
     <ul>
-     <li><a href="travel_recommendation.html" id="home">Home</a></li>
-     <li><a href="aboutus.html" id="aboutus">About Us</a></li>
-     <li><a href="contactus.html" id="contactus">Contact Us</a></li>  
+     <li><a href="./travel_recommendation.html" id="home">Home</a></li>
+     <li><a href="./aboutus.html" id="aboutus">About Us</a></li>
+     <li><a href="./contactus.html" id="contactus">Contact Us</a></li>  
     <li><input type="text" id="destination" placeholder="Destination"><i class="fa fa-search"></i></li>
     <li><button id="searchBtn">Search</button></li>
     <li><button id="resetBtn">Reset</button></li>
     </ul>
-    
-    <div class="home">
-        <h1>LET'S TAKE YOU THERE</h1>
-        <p>Looking for your next dream destination let us help you by narrowing down all the destination
-            at the comfort of your home. Live all the admin to us from flights, accomodation,aiport transfers
-            and food.</p>
-        <button id="search">Search Now</button>    
+
+    <div class="aboutus">
+        <h1>GET IN TOUCH</h1>
+        <P>We would love to hear from you!</P>
+        <form>
+            <label for="name">Name</label><br>
+            <input type="text" id="name"><br><br>
+            <label for="email">Email</label><br>
+            <input type="text" id="email"><br><br>
+            <label for="message">Message</label><br>
+            <textarea name="message" id="message"></textarea><br><br>
+            <button id="inquireBtn">Inquire Now</button>
+        </form>
     </div>
     <br>
     <div class="socials"> 
