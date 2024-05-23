@@ -100,29 +100,28 @@ input{
 
 /*Section styles*/
 .showcase{
-    background-image: url(https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0f6908fa5e81286213c7211276e6b3d&auto=format&fit=crop&w=1500&q=80);
-    background-position: center/cover;
-	background-size:cover;
+    background: url("https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1372&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center/cover;
     height: 100vh;
     width: 100vw;
-    position: center;
     color: #fff;
-    width: 100vw;
+    overflow: hidded;
 }
 
-
-#home{
+/*Home Page Style*/
+#mainHome{
     display: flexbox;
     align-items: center;
     text-align: center;
-    padding-top: 14rem;
+    padding-top: 15rem;
 }
 
-#aboutus{
+/*About us Style*/
+#aboutUs{
         display: flexbox;
         align-items: center;
         text-align: center;
         padding-top: 15rem;
+        overflow-y: auto;
 }
 .card{
     text-align: center;
@@ -150,6 +149,7 @@ input{
     padding: 2px 10px;
 }
 
+/*Buttons for all pages*/
 
 #bookBtn{
     background-color: transparent;
@@ -163,17 +163,82 @@ input{
 
 }
 
-#bookBtn:hover{
+#bookBtn, #submitBtn:hover{
     background-color: #0976be;
 }
 
+#submitBtn{
+  width: 25rem ;
+  border-radius: 20px;
+  text-transform: uppercase;
+  padding: 18px 22px;
+  font-weight: bold;
+  color: #fff;
+  background: transparent;
+}
 
+/*Social Media Styles*/
 .socials{
     display: grid;
     grid-template-columns:1fr;
     grid-gap: 5px;
+    font-size: 30px;
+    color:#fff;
+    left:0;
+    top: 0;
+    position: relative;
+    transition: ease-in-out 0.6ms;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.socials .fa-instagram:hover{
+    color: rgb(194, 4, 194);
+}
+
+.socials .fa-tiktok:hover{
+    opacity: 0.2;
+    color: black;
+}
+
+.socials .fa-facebook:hover{
+    color: #0976be;
+}
+
+.socials .fa-youtube:hover{
+    color: red;
+}
+/*Contact Us Style*/
+#contactUs{
+ text-align: center;
+ padding-top: 13rem;
+}
+
+.form{
+     width: 45rem;
+     padding: 10px ;
+     float: right;
+}
+
+.form input{
+    color: #ffffff;
+    background: none;
+    border-bottom: 1px solid #b1adad;
+    width: 25rem;
+}
+
+
+.form textarea{
+    background: none;
+    border-radius: 5px;
+    width: 25rem;
+    color: #fff;
+    max-width: 25rem;
+    max-height: max-content;
+
+}
+
+.form label{
     font-size: 20px;
-    color: rgb(165, 163, 163);
-    padding-left: 20px;
-    position: fixed;
+    color: #ffffff;
 }
