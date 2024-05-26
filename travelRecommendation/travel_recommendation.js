@@ -1,10 +1,13 @@
-const destinations = document.getElementById('destionations');
-const searchBtn = document.getElementById('searchBtn');
-
-searchBtn.addEventListener('click'), function(){
-    const searchCountries = searchInput.value;
+function searchBtn(){
+    const destinations = document.getElementById('destinations').value;
+    const searchBtn = document.getElementById('searchBtn').value;
 }
 
-document.getElementById("resetBtn").onclick = function(){
-    document.getElementById("destinations").innerHTML="";
+function resetBtn(){
+    document.getElementById('destinations').value="";
+    document.getElementById('resetBtn').value="";
 }
+
+searchBtn.addEventListener("click",destionations);
+
+
