@@ -28,7 +28,7 @@ p{
     background: #fff;
     font-size: 8px;
     height: 30%;
-    padding: 10px 20px;
+    padding: 10px 18px;
 }
 
 
@@ -78,19 +78,25 @@ img{
 }
 
 .nav div.main_list li input{
-    font-size: 15px;
-    border: none;
+    font-size: 12px;
+    background: none;
 }
 
 #searchBtn,#resetBtn{
     background-color: #0976be;
-    border-radius: 8px;
-    border-color: #0976be;
+    border-radius: 12px;
     color: #fff;
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 10px;
     text-transform: uppercase;
-    padding: 10px 20px;
+    padding: 10px 25px;
+    border: none;
+}
+
+.navlinks-2{
+    background: lightskyblue;
+    border-radius: 40px;
+    padding: 60px 20px;
+    align-items: center;
 }
 
 /*Search*/
@@ -98,7 +104,7 @@ input{
  overflow: hidden;
  text-align: center;
  padding: 10px 20px;
- font-size: 12px; 
+ font-size: 10px; 
  border: none;
 }
 
@@ -156,7 +162,6 @@ input{
 
 /*Buttons for all pages*/
 #bookBtn{
-    background-color: transparent;
     color: #fff;
     padding: 18px 22px;
     font-weight: bold;
@@ -164,6 +169,7 @@ input{
     text-transform: uppercase;
     border-radius: 20px;
     transition: 0.5s ease-in-out;
+    border: none;
 
 }
 
@@ -179,6 +185,7 @@ input{
   color: #fff;
   background: transparent;
   width: 15rem;
+  border: 1px solid #f7f5f5;
 }
 
 /*Social Media Styles*/
@@ -229,8 +236,9 @@ input{
 .form input{
     color: #ffffff;
     background: none;
-    border-bottom: 1px solid #f7f5f5;
+    border: 1px solid #f7f5f5;
     width: 15rem;
+    border-radius: 5px;
 
 }
 
@@ -242,6 +250,7 @@ input{
     max-width: 25rem;
     max-height: max-content;
     width: 15rem;
+    border: 1px solid #f7f5f5;
 }
 
 .form label{

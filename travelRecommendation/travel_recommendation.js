@@ -1,33 +1,32 @@
-const travelDestinations = document.getElementById('travelDestinations');
-const searchBtn = document.getElementById('searchBtn');
-const destination =[];
 
-function resetBtn(){
-    document.getElementById('travelDestination').value="";
-}
+const options = { timeZone: 'America/New_York', hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
+const newYorkTime = new Date().toLocaleTimeString('en-US', options);
+console.log("Current time in New York:", newYorkTime);
 
-function searchDestinations(){
-    const input = document.getElementById('travelDestinations');
-    const destinationDiv = document.getElementById('destination');
-    destinationDiv.innerHTML = '';
+function searchBtn(){
+    const input = document.getElementById('travelRecommendation');
+    input= '';
 
     fetch ('travel_recommendation.api.json')
     .then(response => response.json())
     .then(data => {
-        const countries = data.countries.find(item => item.name.toLowerCase() === input);
+        const country = data.countries.find(item => item.name.toLowerCase() === input);
         
-        if (countries){
-            const name = countries.name.join(',');
-            const cities = countries.cities.join(',');
-            const description = countries.description.join(',');
+        if (country){
+            const id = country.id.join(',');
+            const beaches = country.beaches.join(',');
+            const temples = country.temples.join(',');
+            const description = country.description;
 
-            destinationDiv.innerHTML += `<h6>${countries.name}</h6>`;
-            destinationDiv.innerHTML += `<img scr = "${condition.imagescr}" alt="jpg">`;
+            input.innerHTML += `${country.name}`;
+            input.innerHTML += `<img src = "${country.imagesrc}" alt="hjh">`;
 
-            destinationDiv.innerHTML += `<p><strong>Cities:</strong>${cities}</p>`;
+            input.innerHTML += `<p><strong>ID:</strong> ${id}</p>`;
+            destinationDiv.innerHTML += `<p><strong>Beaches:</strong> ${beaches}</p>`;
+            destinationDiv.innerHTML += `<p><strong>Temples:</strong> ${temples}</p>`;
             destinationDiv.innerHTML += `<p><strong>Description:</strong> ${description}</p>`;
             } else {
-              destinationDiv.innerHTML = 'Condition not found.';
+              destinationDiv.innerHTML = 'Country could not found.';
             }
           })
 
@@ -36,6 +35,4 @@ function searchDestinations(){
             destinationDiv.innerHTML = 'An error occurred while fetching data.';
         });
 }
-
-searchBtn.addEventListener('click', searchDestinations)
 
