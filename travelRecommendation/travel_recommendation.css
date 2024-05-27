@@ -155,7 +155,6 @@ input{
 }
 
 /*Buttons for all pages*/
-
 #bookBtn{
     background-color: transparent;
     color: #fff;
@@ -230,7 +229,7 @@ input{
 .form input{
     color: #ffffff;
     background: none;
-    border-bottom: 1px solid #b1adad;
+    border-bottom: 1px solid #f7f5f5;
     width: 15rem;
 
 }
@@ -243,7 +242,6 @@ input{
     max-width: 25rem;
     max-height: max-content;
     width: 15rem;
-
 }
 
 .form label{

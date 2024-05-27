@@ -6,12 +6,12 @@
             "cities": [
                 {
                     "name": "Sydney, Australia",
-                    "imageUrl": "./images/Sydney.jpg",
+                    "imageUrl": "Sydney.jpg",
                     "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
                 },
                 {
                     "name": "Melbourne, Australia",
-                    "imageUrl": "./images/melbourne.jpg",
+                    "imageUrl": "melbourne.jpg",
                     "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
                 }
             ]
@@ -22,12 +22,12 @@
             "cities": [
                 {
                     "name": "Tokyo, Japan",
-                    "imageUrl": "./images/japan.jpg",
+                    "imageUrl": "japan.jpg",
                     "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
                 },
                 {
                     "name": "Kyoto, Japan",
-                    "imageUrl": "enter_your_image_for_kyoto.jpg",
+                    "imageUrl": "tokyo.jpg",
                     "description": "Known for its historic temples, gardens, and traditional tea houses."
                 }
             ]
@@ -38,12 +38,12 @@
             "cities": [
                 {
                     "name": "Rio de Janeiro, Brazil",
-                    "imageUrl": "enter_your_image_for_rio.jpg",
+                    "imageUrl": "rio.jpg",
                     "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks."
                 },
                 {
                     "name": "São Paulo, Brazil",
-                    "imageUrl": "enter_your_image_for_sao-paulo.jpg",
+                    "imageUrl": "sao.jpg",
                     "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
                 }
             ]
