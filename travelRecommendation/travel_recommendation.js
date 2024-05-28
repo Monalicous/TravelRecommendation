@@ -3,36 +3,39 @@ const options = { timeZone: 'America/New_York', hour12: true, hour: 'numeric', m
 const newYorkTime = new Date().toLocaleTimeString('en-US', options);
 console.log("Current time in New York:", newYorkTime);
 
-function searchBtn(){
-    const input = document.getElementById('travelRecommendation');
-    input= '';
+function searchRecommendations(){
+    const input = document.getElementById('travelRecommendation').value.toLowerCase();
+    const recommendationLi = document.getElementById('recommendation');
+    recommendationLi.innerHTML = '';
 
     fetch ('travel_recommendation.api.json')
     .then(response => response.json())
     .then(data => {
         const country = data.countries.find(item => item.name.toLowerCase() === input);
-        
-        if (country){
+        const beach = data.beaches.find(item => item.name.toLowerCase() === input);
+        const temple = data.temples.find(item => item.name.toLowerCase() === input);
+
+
+        if (country || beach || temple){
             const id = country.id.join(',');
-            const beaches = country.beaches.join(',');
-            const temples = country.temples.join(',');
-            const description = country.description;
+            const cities = country.cities.join(',');
+            const description = country.description.join(',');
+            
 
-            input.innerHTML += `${country.name}`;
-            input.innerHTML += `<img src = "${country.imagesrc}" alt="hjh">`;
+            input.innerHTML += `<img src = "${country.imagesrc}" alt="hjh">` ;
+            input.innerHTML += `${country.name}` || `${beach.name}` || `${temple.name}`;
 
-            input.innerHTML += `<p><strong>ID:</strong> ${id}</p>`;
-            destinationDiv.innerHTML += `<p><strong>Beaches:</strong> ${beaches}</p>`;
-            destinationDiv.innerHTML += `<p><strong>Temples:</strong> ${temples}</p>`;
-            destinationDiv.innerHTML += `<p><strong>Description:</strong> ${description}</p>`;
+            input.innerHTML += `<p><strong>Cities:</strong> ${cities}</p>`;
+            recommendationLi.innerHTML += `<p><strong>Description:</strong> ${description}</p>`;
             } else {
-              destinationDiv.innerHTML = 'Country could not found.';
+              recommendationLi.innerHTML = 'Country could not found.';
             }
           })
 
           .catch(error => {
             console.log=('Error:', error);
-            destinationDiv.innerHTML = 'An error occurred while fetching data.';
+            recommendationLi.innerHTML = 'An error occurred while fetching data.';
         });
 }
 
+searchBtn.addEventListener('click', searchRecommendations);

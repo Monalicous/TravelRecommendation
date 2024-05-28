@@ -24,11 +24,10 @@ p{
 .nav{
     width: 100%;
     position: fixed;
-    text-align: center;
     background: #fff;
     font-size: 8px;
     height: 30%;
-    padding: 10px 18px;
+    padding: 10px 20px;
 }
 
 
@@ -38,7 +37,7 @@ p{
 }
 
 img{
-    width: 180px;
+    width: 150px;
 }
 .nav .logo a {
     text-decoration: none;
@@ -50,7 +49,7 @@ img{
 .nav .main_list {
     float: right;
     display: flex;
-    padding-top: 80px;
+    padding-top: 85px;
 }
 
 .nav .main_list ul {
@@ -80,6 +79,7 @@ img{
 .nav div.main_list li input{
     font-size: 12px;
     background: none;
+    width: 14rem;
 }
 
 #searchBtn,#resetBtn{
@@ -95,8 +95,8 @@ img{
 .navlinks-2{
     background: lightskyblue;
     border-radius: 40px;
-    padding: 60px 20px;
-    align-items: center;
+    padding: 4px;
+    text-align:center;
 }
 
 /*Search*/
@@ -170,7 +170,6 @@ input{
     border-radius: 20px;
     transition: 0.5s ease-in-out;
     border: none;
-
 }
 
 #bookBtn, #submitBtn:hover{
@@ -222,28 +221,28 @@ input{
 
 /*Contact Us Style*/
 #contactUs{
- text-align: center;
- padding-top: 13rem;
+    display: flexbox;
+    align-items: center;
+    text-align: center;
+    padding-top: 13rem;
+    width: 100%;
 }
 
-.form{
+#contactUs .form{
      width: 45rem;
      padding: 5px ;
      float: left;
-
 }
 
-.form input{
+#contactUs .form input{
     color: #ffffff;
     background: none;
     border: 1px solid #f7f5f5;
     width: 15rem;
     border-radius: 5px;
-
 }
 
-
-.form textarea{
+#contactUs .form textarea{
     background: none;
     border-radius: 5px;
     color: #fff;
@@ -253,7 +252,7 @@ input{
     border: 1px solid #f7f5f5;
 }
 
-.form label{
+#contactUs .form label{
     font-size: 15px;
     color: #ffffff;
 }
