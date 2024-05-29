@@ -11,6 +11,12 @@
           "width: fit-content"
         ]
       }
+    ],
+    "axe/structure": [
+      "default",
+      {
+        "list": "off"
+      }
     ]
   }
 }
