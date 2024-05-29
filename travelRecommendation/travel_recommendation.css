@@ -198,7 +198,7 @@ input{
     top: 0;
     position: relative;
     transition: ease-in-out 0.6ms;
-    width: fit-content;
+    width: auto;
     cursor: pointer;
 }
 
